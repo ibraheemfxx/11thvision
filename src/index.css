@@ -1,10 +1,15 @@
 @font-face {
   font-family: 'Forevs Demo';
-  src: url('/fonts/ForevsDemoFont.woff2') format('woff2'),
-       url('/fonts/ForevsDemoFont.woff') format('woff'),
-       url('/fonts/ForevsDemoFont.otf') format('opentype');
+  src: url('/projects/fonts/ForevsDemo-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Forevs Demo';
+  src: url('/projects/fonts/ForevsDemo-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
 }
 
 *,
