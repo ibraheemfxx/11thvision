@@ -30,9 +30,12 @@ export default function Hero() {
       />
 
       <motion.p
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.015, delayChildren: 0.25 } },
+        }}
         style={{
           fontSize: '1.125rem',
           fontWeight: 500,
@@ -40,7 +43,23 @@ export default function Hero() {
           marginBottom: '4px',
         }}
       >
-        Ibraheem Mohammedally
+        {'Ibraheem Mohammedally'.split('').map((char, i) => (
+          <motion.span
+            key={i}
+            variants={{
+              hidden: { opacity: 0, y: 16, filter: 'blur(6px)' },
+              visible: {
+                opacity: 1,
+                y: 0,
+                filter: 'blur(0px)',
+                transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] },
+              },
+            }}
+            style={{ display: 'inline-block', whiteSpace: 'pre' }}
+          >
+            {char}
+          </motion.span>
+        ))}
       </motion.p>
 
       <motion.p
