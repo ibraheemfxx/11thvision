@@ -8,7 +8,7 @@ const softBlurChar = {
     opacity: 1,
     y: 0,
     filter: 'blur(0px)',
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
   },
 }
 
@@ -25,7 +25,7 @@ const bottomUpChar = {
 // "the" = 3 chars, stagger 10ms, duration 0.55s
 // last char starts at 2×0.01 = 0.02s, ends at 0.02+0.55 = 0.57s
 // "vision" starts at ~0.6s
-const THE_DONE_AT = 0.4
+const THE_DONE_AT = 0.6
 
 function App() {
   useEffect(() => {
