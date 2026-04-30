@@ -71,7 +71,12 @@ function App() {
           style={{ display: 'inline-flex', fontSize: '36px', fontStyle: 'normal', overflow: 'hidden' }}
         >
           {'vision'.split('').map((char, i) => (
-            <motion.span key={i} variants={bottomUpChar} style={{ display: 'inline-block', whiteSpace: 'pre' }}>
+            <motion.span
+              key={i}
+              variants={bottomUpChar}
+              whileHover={{ y: -5, transition: { duration: 0.2, ease: [0.22, 1, 0.36, 1] } }}
+              style={{ display: 'inline-block', whiteSpace: 'pre', cursor: 'default' }}
+            >
               {char}
             </motion.span>
           ))}
